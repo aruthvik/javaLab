@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analyticsConfigurations>
+	<analyticsConfiguration credentialType="serviceAccount" name="savvisDirectConfiguration">
+		<controlConfig>
+			<logLevel>INFO</logLevel> <!-- INFO, DEBUG -->
+			<httpProxyUseFlag>Y</httpProxyUseFlag>
+			<httpProxyIPAddress>10.12.134.32</httpProxyIPAddress>
+			<httpProxyPort>8080</httpProxyPort>
+		</controlConfig>
+		<gaConfiguration>
+			<!-- Authentication Configuration -->
+			<gaCredential>
+				<serviceAccountId>604182041950@developer.gserviceaccount.com</serviceAccountId>
+				<serviceAccountScopes>https://www.googleapis.com/auth/analytics.readonly</serviceAccountScopes>
+				<serviceAccountUser>informatica_savvis@savvis.com</serviceAccountUser>				
+				<privateKeyFileAbsoultePath>C:\tmp\279e29b071b872c37228723a5bc02a01b774f0ac-privatekey.p12</privateKeyFileAbsoultePath>
+				<gaApplicationName>SavvisDirect.com</gaApplicationName>
+			</gaCredential>
+			<!-- Analytics Data Query Configuration -->
+			<gaQueries>
+				<gaQuery id="1" name="queryName-1">
+					<gaProfileId>65525810</gaProfileId>
+					<gaDimensions>ga:visitorType,ga:visitCount</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaSweepBackDays>30</gaSweepBackDays> <!-- number of days to sweep back -->
+					<gaEndDate>CURRENT_DATE</gaEndDate> <!-- yyyy-MM-dd / CURRENT_DATE -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\savvisdirect-query1.csv</gaQueryOutputFilepath>
+				</gaQuery>
+				<gaQuery id="2" name="queryName-2">
+					<gaProfileId>65525810</gaProfileId>
+					<gaDimensions>ga:visitCount</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaStartDate>2013-08-01</gaStartDate> <!-- number of days to sweep back -->
+					<gaEndDate>CURRENT_DATE</gaEndDate> <!-- yyyy-MM-dd / CURRENT_DATE -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\savvisdirect-query2.csv</gaQueryOutputFilepath>
+				</gaQuery>
+				<gaQuery id="3" name="queryName-3">
+					<gaProfileId>65525810</gaProfileId>
+					<gaDimensions>ga:visitCount</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaStartDate>2013-08-01</gaStartDate> <!-- number of days to sweep back -->
+					<gaEndDate>2013-08-21</gaEndDate> <!-- yyyy-MM-dd / CURRENT_DATE -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\savvisdirect-query3.csv</gaQueryOutputFilepath>
+				</gaQuery>
+				<gaQuery id="4" name="queryName-4">
+					<gaProfileId>65525810</gaProfileId>
+					<gaDimensions>ga:visitCount</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaSweepBackDays>30</gaSweepBackDays> <!-- number of days to sweep back -->
+					<gaEndDate>2013-08-21</gaEndDate> <!-- yyyy-MM-dd / CURRENT_DATE -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\savvisdirect-query4.csv</gaQueryOutputFilepath>
+				</gaQuery>
+			</gaQueries>
+		</gaConfiguration>
+	</analyticsConfiguration>
+</analyticsConfigurations>

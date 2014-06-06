@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analyticsConfigurations>
+	<analyticsConfiguration credentialType="serviceAccount" name="aravindruthvikBlogConfiguration">
+		<controlConfig>
+			<logLevel>INFO</logLevel> <!-- INFO, DEBUG -->
+			<httpProxyUseFlag>Y</httpProxyUseFlag>
+			<httpProxyIPAddress>10.12.134.32</httpProxyIPAddress>
+			<httpProxyPort>8080</httpProxyPort>
+		</controlConfig>
+		<gaConfiguration>
+			<!-- Authentication Configuration -->
+			<gaCredential>
+				<serviceAccountId>77019868440-k066i1kqgronvjbeldjq8h4eokg282d9@developer.gserviceaccount.com</serviceAccountId>
+				<serviceAccountScopes>https://www.googleapis.com/auth/analytics.readonly</serviceAccountScopes>
+				<serviceAccountUser>aravind.ruthvik@gmail.com</serviceAccountUser>
+				<privateKeyFileAbsoultePath>C:\tmp\7f2af948808ebd9d8e6ac8c196aa789373f051f4-privatekey.p12</privateKeyFileAbsoultePath>
+				<gaApplicationName>Aravind-AnalyticsTest/1.0</gaApplicationName>
+			</gaCredential>
+			<!-- Analytics Data Query Configuration -->
+			<gaQueries>
+				<gaQuery id="1" name="queryName-1">
+					<gaProfileId>75324534</gaProfileId>
+					<gaDimensions>ga:visitorType,ga:visitCount,ga:source,ga:keyword,ga:operatingSystem,ga:continent,ga:hostname</gaDimensions>
+					<gaMetrics>ga:visits,ga:bounces</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaSweepBackDays>30</gaSweepBackDays> <!-- number of days to sweep back -->
+					<gaEndDate>CURRENT_DATE</gaEndDate> <!-- yyyy-MM-dd -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\aravindruthvikBlogConfiguration-queryName-1.csv</gaQueryOutputFilepath>
+				</gaQuery>
+				<gaQuery id="2" name="queryName-2">
+					<gaProfileId>75324534</gaProfileId>
+					<gaDimensions>ga:visitorType,ga:visitCount,ga:operatingSystem,ga:continent</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaSweepBackDays>30</gaSweepBackDays> <!-- number of days to sweep back -->
+					<gaEndDate>CURRENT_DATE</gaEndDate> <!-- yyyy-MM-dd -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\aravindruthvikBlogConfiguration-queryName-2.csv</gaQueryOutputFilepath>
+				</gaQuery>
+			</gaQueries>
+		</gaConfiguration>
+	</analyticsConfiguration>
+	<analyticsConfiguration credentialType="serviceAccount" name="savvisDirectConfiguration">
+		<controlConfig>
+			<logLevel>INFO</logLevel> <!-- INFO, DEBUG -->
+			<httpProxyUseFlag>Y</httpProxyUseFlag>
+			<httpProxyIPAddress>10.12.134.32</httpProxyIPAddress>
+			<httpProxyPort>8080</httpProxyPort>
+		</controlConfig>
+		<gaConfiguration>
+			<!-- Authentication Configuration -->
+			<gaCredential>
+				<serviceAccountId>604182041950@developer.gserviceaccount.com</serviceAccountId>
+				<serviceAccountScopes>https://www.googleapis.com/auth/analytics.readonly</serviceAccountScopes>
+				<serviceAccountUser>informatica_savvis@savvis.com
+				</serviceAccountUser>
+				<privateKeyFileAbsoultePath>C:\tmp\9e0a598d5e12d6340019820b35cc52e9536004ab-privatekey.p12</privateKeyFileAbsoultePath>
+				<gaApplicationName>SavvisDirect.com</gaApplicationName>
+			</gaCredential>
+			<!-- Analytics Data Query Configuration -->
+			<gaQueries>
+				<gaQuery id="1" name="queryName-1">
+					<gaProfileId>75324534</gaProfileId>
+					<gaDimensions>ga:visitorType,ga:visitCount</gaDimensions>
+					<gaMetrics>ga:visits</gaMetrics>
+					<gaSegment></gaSegment>
+					<gaFilter></gaFilter>
+					<gaSort></gaSort>
+					<gaSweepBackDays>30</gaSweepBackDays> <!-- number of days to sweep back -->
+					<gaEndDate>CURRENT_DATE</gaEndDate> <!-- yyyy-MM-dd / CURRENT_DATE -->
+					<gaMaxResults>50</gaMaxResults>
+					<gaQueryOutputFilepath>C:\\tmp\\savvisdirect-query1.csv</gaQueryOutputFilepath>
+				</gaQuery>
+			</gaQueries>
+		</gaConfiguration>
+	</analyticsConfiguration>
+</analyticsConfigurations>

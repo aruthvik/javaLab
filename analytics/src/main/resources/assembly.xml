@@ -1,0 +1,36 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+		<format>tar.gz</format>
+	</formats>
+	<!-- Dependency Artifacts -->
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<useProjectArtifact>true</useProjectArtifact>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
+	<!-- Files to be included -->
+	<fileSets>
+		<fileSet>
+			<includes>
+				<include>bin/*.bat</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<files>
+		<file>
+			<source>src/main/resources/log4j.properties</source>
+			<outputDirectory>conf</outputDirectory>
+		</file>
+		<file>
+			<source>src/main/resources/configuration.xml</source>
+			<outputDirectory>conf</outputDirectory>
+		</file>
+	</files>
+</assembly>
